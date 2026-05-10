@@ -1,0 +1,2 @@
+"""Runathon FastAPI application package."""
+

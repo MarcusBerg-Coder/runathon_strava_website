@@ -1,0 +1,21 @@
+{
+  "name": "runathon-strava-website",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npx vercel@latest dev -L",
+    "dev:web": "npm --workspace apps/web run dev",
+    "build": "npm --workspace apps/web run build",
+    "lint": "npm --workspace apps/web run lint",
+    "test": "npm --workspace apps/web run test && python -m pytest services/api/tests",
+    "test:web": "npm --workspace apps/web run test",
+    "test:api": "python -m pytest services/api/tests"
+  },
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10.0.0"
+  }
+}
